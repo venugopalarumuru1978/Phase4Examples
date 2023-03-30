@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .textboxsytle
+        {
+            width:200px;
+            height: 30px;
+            background-color: aquamarine;
+            color:blue;
+            font-weight: bold;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .multilineTextbox
+        {
+            width:200px;
+            height: 100px;
+            background-color: aquamarine;
+            color:blue;
+            font-weight: bold;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table width="50%" border="1">
+        <tr>
+            <td>Person Name : </td>
+            <td>
+                <input type="text"  name="txtPname" class="textboxsytle" />
+            </td>
+        </tr>   
+        <tr>
+            <td>Gender : </td>
+            <td>
+                <input type="radio"  name="rdoGender" value="Male"  />Male
+                <input type="radio"  name="rdoGender" value="Female"  />Female
+            </td>
+        </tr>
+        <tr>
+            <td>Hobbies : </td>
+            <td>
+                <input type="checkbox"  name="chkHb1"  value="reading" />Reading Books
+                <input type="checkbox"  name="chkHb2"  value="chess" />Playing Chess
+            </td>
+        </tr>
+        <tr>
+            <td>Address </td>
+            <td>
+                <textarea name="txtAdrs"  rows="5"  cols="50" class="multilineTextbox"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Location : </td>
+            <td>
+                <select name="ddlcity" class="textboxsytle">
+                    <option value="Hyd">Hyderabad</option>
+                    <option value="Bgl">Bangalore</option>
+                    <option value="Amr">Amaravathi</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="button"  value="Register Here" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
