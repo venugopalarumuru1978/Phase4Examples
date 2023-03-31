@@ -1,0 +1,68 @@
+Today's Agenda:-
+---------------
+BootStrap - NavBar
+Misc. Concepts
+-----------------------------------
+NavBar :-  it consist collection of hyperlinks to navigate pages inside the website. 
+
+<nav>.. </nav>  tag is used in html5 tag(bootstrap)
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
+</nav>
+-----------------
+JavaScript :-
+
+What is a Web Scripting? 
+
+		Programming with Web Page.
+
+There are different types of Script Languages
+		ECMAScript 
+		VBScript = it supports only IE Browser
+		JavaScript = It is a browser independent script lang. 
+		jQuery  =  Modified and Simplified Version of JavaScript.
+
+		Front End Languages for UI Design of web pages:- 
+		Angular JS / Angular (TypeScript)
+		React JS  (ES6)
+		Node JS
+What is a JavaScript?
+		
+		It is a loosely	typed script language which menat for following two things
+				1.  Creating Dynamic Web Pages.
+				2.  Validating Html form Inputs.
+
+1.  Any Script Language is not having data types to declare variables. 
+	so that to declare variable use following syntax
+				variablename = value;
+				var/let  variablename = value;
+2.  Any script has to be integrate with HTML Program only. To write any script use following tag
+		<script type="text/javascript">
+				code.....
+		</script> 
+	This tag has to be palced either in <head> / end of <body> tag.
+
+3.  To print something on browser
+		document.write(stmt/variable);		
+			document is a object which specified currently working web page.
+4.  To print something on Browser Console
+		console.log(stmt/varaible)
+5.  JavaScript is a Function Based Script Lang, so that every task has to be done by creating a user defined function and it has to be called based on requirement. 
+
+Function  <function_name>([arg])
+{
+	body of the fun
+	[return <value>]
+}
+
+to call the function 
+	function_name([arg values]);
+6. While creating html forms, every input tool has to be enclosed within the <form> tag.
+<form name="..."   method="GET/POST"  action="pagename/servlet/controllername/...">
+....
+</form>
+
+Note :-  to get or set value from any tool, 
+		formname.toolname.value;

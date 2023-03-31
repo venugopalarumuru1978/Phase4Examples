@@ -1,0 +1,180 @@
+Today's Agenda:-
+----------------
+1. Intro  to HTML & CSS
+2. HTML Forms
+----------------
+
+What is an HTML?
+
+It is  a Hyper Text Markup Lang which meant for creating and design the web page.
+It is not a programming lang, so that we cannot inmplement any kinds programming techniques. 
+
+Any Prog Lang:-  Variables, Data Types, Keywords, Input/output stmts, control stmts, arrays, strings, user defined methods, .....
+
+It is a Markup lang, which is having collection of commands, these commands are called as tags.
+
+<tag name  [properties]>
+	Action
+</tag name>
+
+Tags are classified into two types:-
+
+1. Container Tags :-  these tags are having a begining and ending elements
+		<tagname ...> Action </tagname>
+2. Non-Container Tags :-  these tags are having only begining element.
+		<tag name ....  />
+
+To work with HTML, CSS and JavaScript, we don't need any software, just required a browser to get an output. 
+
+To Write a program of html, css and JS, we need any text editor(notepad, editplus, SublimeText IDE...)
+As per present senioero, advanced editors are exist in the market.
+			VS Code (Visual Studio Code)
+
+Structure :-
+------------
+<html>
+
+<head>
+	<title>Title of the Page</title>
+	......
+</head>
+
+<body>
+	Actual Program
+</body>
+
+</html>
+
+
+1.  Program has to save with .html extension
+2.  Execute html program with browser.
+----------------------------
+h1, h2, h3, h4, h5, h6 are different heading tags. 
+<b>Bold</b>
+<i>Italic</i>
+<u>Underline</u>
+<sub>Subscript</sub>
+<sup>super script</sup>
+<hr /> = Horizantal Line
+<br /> = LIne break
+<img src="filename with path"  height="Pixels/%age" width="Pixels/%age"  ... />
+			to present an image 
+<a href="page name"> Link text </a> :- to create hyper link b/w pages. 
+
+<p>Paragraph</p>
+
+List Tags :- 
+these tags are used to present any text point by point. 
+
+Ordered List  :-  these are used to present text by using numbers/alphabets/romon letter
+
+	<ol type="1/I/i/A/a">
+		<li>Point-1</li>
+		.......
+	</ol>
+Unordered List :- these are used to present text by using symbols
+
+	<ul  type="dot/square/circle">
+		<li>Point-1</li>
+		...............
+	</ul>
+Defintion List  :-  these are used to present heading and it's related definition.
+	<dl>
+		<dt> Heading</dt>
+		<dd> defintion</dd>
+	</dl>
+
+For Data Presentation in different positions <table> tag and <div> tag's are used.
+
+TABLE TAG:- 
+
+<table border="1/0" width="%age">
+	<tr>
+		<th>Table Head/Col Head</th>
+		<th>Table Head/Col Head</th>
+		..............
+	</tr>
+
+	<tr>
+		<td>Table Data/Col Value</td>
+		<td>Table Data/Col Value</td>
+		................
+	</tr>
+
+	................
+	................
+</table>
+-------------------
+CSS :- Cascade Style Sheets
+
+It is meant for appling some styles for the web page elements. 
+Styles like :  colors, fonts, margins, ......
+
+Css will be applied on web page in 3 ways :-
+
+1. Inline CSS		:-  these css are implemented for every tag with style property.
+				<tag  style="propname:value;propname:value;.....>
+
+2. Page Level CSS	:-   these type of css will be created in head tag by using <style> tag. 
+
+		<head>
+			<style>
+				...
+			</style>
+		</head>
+
+		Here css will be applied for every tag as follows
+
+			tagname{
+				propname:value;
+				propname:value;
+				......
+			}
+
+		css allows to write user defined css classes
+		these classes are defined by starting with either ./# then  classname
+
+			.cssclassname{
+				propname:value;
+			}
+				to implement :
+					<tagname class="css classname" ... />			
+			#cssclassname{
+				propname:value;
+			}
+				to implement 
+					<tagname id="css classname" ..... />
+3. Site Level CSS :- these css are used in multiple web pages. 
+
+		a.  Create a css file having extension .css
+		b.  Define all css classes in that file
+		c.  Link this css file to the every web page whereever it is needed in <head> tag.
+				<link herf="css file name"  rel="stylesheet" /> 
+--------------------
+HTML Forms :- These are used to provide some inputs to the web page. 
+
+html provides different collection of tools
+
+textbox, button, radiobutton, checkbox, dropdownlist, .....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
