@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>JavaScript Session</h1>
+    <script type="text/javascript">
+       var x = 100; // global variable
+       function demofun1()
+       {
+            document.write("This is User Defined Function-1 : ");
+            document.write(x);
+            x = x+10;
+       }
+
+       function demofun2()
+       {
+        document.write("Fun2 : ")
+        document.write(x);
+
+        let y = 120;
+        document.write("<br />Y value is : " + y);
+       } 
+
+       // calling area
+       demofun1();
+       demofun2();
+
+    </script>    
+</body>
+</html>
