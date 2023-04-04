@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form name="frm1">
+    <h1 style="text-align: center;">JavaScript Session - Radio Button</h1>
+
+    <div style="text-align: center;">
+        <h2>Image Demo : </h2>
+        <input type="radio"  name="rdoImg" id="rdo1"  value="pic1.jpg"  />Pic1
+        <input type="radio"  name="rdoImg" id="rdo2" value="Pic2.jpg" />Pic2
+        <input type="radio"  name="rdoImg" id="rdo3" value="Img3.jpg" />Pic3
+        <input type="button"  value="Get an Image" onclick="DemoImgRadio()" />
+        <br /><br />
+        <div id="res" style="color:green"></div>
+       
+    </div>
+</form>
+    <script type="text/javascript">
+
+        function DemoImgRadio()
+        {
+            // <img src="Images/Img3.jpg"  height="200px"  width="100%" />
+            
+            if(document.getElementById("rdo1").checked == true || 
+            document.getElementById("rdo2").checked == true || 
+            document.getElementById("rdo3").checked == true)
+            {
+            var getpicname = frm1.rdoImg.value;
+
+            var printpic = "<img src='Images/" + getpicname +  "' width='100%' height='250px' />";
+            //alert(printpic);
+            document.getElementById("res").innerHTML = printpic;
+            }
+            else
+            alert("Please select any one option");
+        }
+       
+    </script>    
+</body>
+</html>

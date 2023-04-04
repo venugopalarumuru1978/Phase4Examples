@@ -20,11 +20,11 @@
                         <b>Login Here</b>
                     </div>
                     <div class="card-body">
-                    <form name="frmLogin" method="POST" onsubmit="return ValidateLoginForm()" action="NavBarEx.html">
+                    <form name="frmLogin" method="POST" action="NavBarEx.html">
                         Username: 
-                        <input type="text"  name="txtuser" class="form-control" />
+                        <input type="text"  name="txtuser" class="form-control" required  />
                         Password:
-                        <input type="password" name="txtPass"  class="form-control" />
+                        <input type="password" name="txtPass"  class="form-control" required />
                         <br />
                         <input type="submit"  value="Click Me" class="btn btn-primary" />
                         <button type="reset" class="btn btn-danger">Reset All</button>
@@ -38,31 +38,6 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-
-        function ValidateLoginForm()
-        {
-            var uname = frmLogin.txtuser.value;
-            var pwd = frmLogin.txtPass.value;
-
-            if(uname=="" && pwd=="")
-            {
-                alert("Please enter username and password");
-                return false;
-            }
-
-            if(uname=="Venugopal"  && pwd=="12345")
-            {
-                return true;
-            }
-
-            if(uname!="Venugopal"  || pwd!="12345")
-            {
-                alert("Please check username/password");
-                return false;
-            }
-   
-        }
-    </script>
+    
 </body>
 </html>

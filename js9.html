@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body onload="loadingDateItems()">
+    <h1 style="text-align: center;">JavaScript Session - Dropdownlist</h1>
+<form name="frm1">
+        <div style="text-align: center;">
+                <select name="ddlDay" id="ddlDay">
+                </select>
+
+                <select name="ddlMonth"  id="ddlMonth">
+                </select>
+
+                <select name="ddlYear"  id="ddlYear">
+                </select>
+                
+                <input type="button"  value="GetDate" onclick=" DisplayDate()" />
+               
+                <br /><br />
+            <div style="text-align: center;" id="res"></div>
+        </div>
+</form>
+    <script type="text/javascript">
+     
+     function loadingDateItems()
+     {
+        var days = "<option value='-1'>Day</option>";
+
+        for(let n=1;n<=31;n++)
+        {
+            days = days + "<option value='" + n + "'>" + n + "</option>";
+        }
+        document.getElementById("ddlDay").innerHTML = days;
+
+        var years = "<option value='-3'>Year</option>";
+        for(let y=1980;y<=2023;y++)
+        {
+            years = years + "<option value='" + y + "'>" + y + "</option>";
+        }
+        document.getElementById("ddlYear").innerHTML = years;
+
+        var mths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        var months = "<option value='-2'>Month</option>";
+        for(let i=0;i<mths.length;i++)
+        {
+            months = months + "<option value='" + mths[i] + "'>" + mths[i] + "</option>";
+        }
+        document.getElementById("ddlMonth").innerHTML = months;
+     }
+
+     function  DisplayDate()
+     {
+        var day = frm1.ddlDay.value;
+        var mths = frm1.ddlMonth.value;
+        var yrs = frm1.ddlYear.value;
+
+        var result = day + " - " + mths + " - " + yrs;
+        document.getElementById("res").innerHTML = "Select Date is : " + result;
+     }
+     
+    </script>    
+</body>
+</html>

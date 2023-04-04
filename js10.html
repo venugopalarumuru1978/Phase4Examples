@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;">JavaScript Session - Dropdownlist</h1>
+<form name="frm1">
+        <div style="text-align: center;">
+            Country :
+            <select name="ddlCtry" onchange="loadStates()">
+                <option value="-1">Select Country</option>
+                <option value="IND">India</option>
+                <option value="USA">America</option>
+            </select>
+            <br />
+            States :
+            <select name="ddlState"  id="ddlState">
+            </select>
+
+                <br /><br />
+            <div style="text-align: center;" id="res"></div>
+        </div>
+</form>
+    <script type="text/javascript">
+     
+    function loadStates()
+    {
+        var ctry = frm1.ddlCtry.value;
+        //alert(ctry);
+        if(ctry!="-1")
+        {
+            var stas = "<option value='-2'>State</option>";
+
+            if(ctry=="IND")
+            {
+                var indsts = ["Telangana", "Andhra Pradesh", "Karnataka", "Tamil Nadu", "Kerala"];
+                for(let i=0;i<indsts.length;i++)
+                {
+                    stas = stas + "<option  value='" + indsts[i] + "'>" + indsts[i] + "</option>";
+                }
+
+                document.getElementById("ddlState").innerHTML = stas;
+            }
+
+            if(ctry=="USA")
+            {
+                var usasts = ["New York", "California", "Washington"];
+                for(let i=0;i<usasts.length;i++)
+                {
+                    stas = stas + "<option  value='" + usasts[i] + "'>" + usasts[i] + "</option>";
+                }
+
+                document.getElementById("ddlState").innerHTML = stas;
+            }
+        }
+        else
+            alert("Please select Country");
+    }
+     
+    </script>    
+</body>
+</html>

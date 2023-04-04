@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;">JavaScript Session</h1>
+<form name="frm1">
+    <p style="text-align: center;width: 100%;border-style: solid;">
+        Value 1:
+        <input type="text"  name="txtVal1"  />
+        <br /><br />
+        Value 2:
+        <input type="text" name="txtVal2" />
+        <br /><br />
+        <input type="button"  value="Addition" onclick="calAddition()" />
+        <input type="button"  value="Clear Form" onclick="ResetForm()" />
+         <br />
+        <p id="result" style="text-align: center;width: 100%;color:green"></p>
+    </p>
+</form>
+    <script type="text/javascript">
+
+        function calAddition()
+        {
+            var x = parseFloat(frm1.txtVal1.value);
+            var y = parseFloat(frm1.txtVal2.value);
+
+            var sum = x+y;
+
+            document.getElementById("result").innerHTML = "Addition : " + sum;
+        }
+
+        function ResetForm()
+        {
+            frm1.txtVal1.value = "";
+            frm1.txtVal2.value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    
+    </script>    
+</body>
+</html>
