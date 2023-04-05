@@ -78,12 +78,15 @@ there are two conversion functions :-
 parseInt() :-  it converts string value into Integer value.
 parseFloat() :-  it converts string value into Float value.
 
-
+-------------------------
 for RadioButtons and DropdownList uses an event "onchange" for the functionality. 
 
-
+-----------------------------
 onload Event :-  this event performs action whenever a page is loading. so that it has to be used with body tag as follows 
 
 <body onload="fun_name()">
-
+-------------------------------
 to declare an array :- var arrname = [val1, val2, val3, ...]
+----------------------------
+As per the script, there is a button called "submit", which meant for submitting page to the server. 
+

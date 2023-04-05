@@ -1,0 +1,165 @@
+Today's Agenda :- 
+-----------------
+1. TypeScript
+2. Introduction to Angular
+--------------------------
+What is a TypeScript?
+
+It is a programming language which is developed by using JavaScript. 
+It is a superset of JavaScript, Addition to JavaScript following concepts are added
+
+1. DataTypes
+2. Oops Concepts
+3. Misc Features
+	a. Arrow Functions
+	b. Multiline Strings
+	c. String Interpolation
+	d. Modules
+
+Points of Typescript:- 
+
+1. TypeScript doesn't support directly in web page, so that typescript has to be convert into javascript, then we can use that script code.
+
+2.  All typescript codes having an extension filename.ts, once it is complied and converted then it generates filename.js file. 
+
+		Filename.ts  ===>  TypeScript Compiler  ===> Filename.js
+
+
+Advantages of Typescript :-
+---------------------------
+1.  Static Typing and Type Safety
+	Static Typing :-   whenever we can fix a data type for the variable while declaration pf variable and we can't change it's data type thoughout the program, then it is called as Static Type.
+	Ex:-  C, C++, Java, ....
+
+	Dynamic Typing :- whenever we can't fix the data type for a variable, based on variable value the data type will be fixed. so that whenever it required, we can change the data type of variable by changing the value. 
+
+	TypeScript supports both typings. 
+
+2. Error Handling :-  Since typescript having compiler, there are chance of identifing errors in the program.
+
+3. OOPS concepts
+4. Intellisence
+
+
+Data Types:- 
+------------
+As per typescript, following data types are existed
+
+1. number :-  it is meant for both integers and float values.
+2. string :- it is meant for string values.
+3. boolean :- it is for true/false.
+4. any :-  for any data type value.
+
+How to Declare Variable :
+
+	var <variable name> : datatype = <value>;
+
+what is a npm?
+
+it is a node package manager installer. 
+
+there are different frontend programming lang,
+		Angular
+		React Js
+		Node Js
+		Express Js
+		Vue Js
+It is the world's largest software library which provides library files for above speicifed lang. 
+It is also called as Software Package Manager and Installer. 
+It contains over  8lakhs code packages. 
+it is a open source, i.e. any body can download and use it freely. 
+this npm includes CLI(Command Line Client) that can be used to download and install softwares. 
+
+Download and Install NPM:-
+
+NPM is installed with Node JS, so that we have to download and install Node JS, so that it automatically installs "NPM".
+
+we can download "Node JS" from web site "https://nodejs.org"
+
+download and install node version 10.13.0
+
+now we can install typescript with following command
+			a.  First goto command prompt
+			b.  use following command to install it
+					"npm install typescript -g"
+
+Steps to write typescript program:- 
+----------------------------------
+1.  Open any text editor(VSCode)
+2.  Code the program and save with .ts extension
+3.  Compile the program 
+	tsc  <filename.ts>
+4. Once it is compiled successfully, it generates .js file, now it can be executed as follows
+	node "filename.js"
+---------------------------------
+OOPS Concepts in TypeScript
+
+Class Creation:- 
+
+class <classname>
+{
+	variable:data type=value;
+	..........
+	..........
+
+	methodname([arg]) : returntype
+	{
+		body of the method
+	}
+}
+
+Object Creation :- 
+		var <objectname> = new <classname>([arg]);
+
+here also we are having access specifier, 
+				private, public, protected
+Note :- to access variable within the class for set / get value :  "this.variable"
+-----------------------------
+How to create a constructor :- 
+
+class <classname>
+{
+	constructor([parameters])
+	{
+		.......
+	}
+}
+
+It will execute whenever an object is created for the class. 
+-----------------------
+Inheritance :- 
+
+In inheritance,  to inherit parent class to the child class "extends" keyword is used. 
+
+Data Abstraction can be achieved with the help of "Interface".
+
+To inherit an interface to the class, we have to use "implements" keyword.
+----------------
+Enumerations :- 
+It is a collection of constants grouping under one unit. 
+
+it acts as one of the user defined data type. 
+
+enum  <enum_name>
+{
+	Const-1, Const-2, ......
+}
+
+-------------------------------
+Module :- 
+
+A module is a class(s) where it allows to export from one program to another program. 
+
+Purpose  of this concept is, export one class into another class within the application. 
+
+while creating class, we have to use "export" keyword for the class. 
+
+export class <classname>
+{
+	
+}
+
+
+where ever  using this exported class, there we have to import the class as follows. 
+
+import {classname, ..} from "./filename";
