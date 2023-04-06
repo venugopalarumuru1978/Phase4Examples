@@ -1,0 +1,95 @@
+Today's Agenda:-
+----------------
+Angular
+	Introduction
+	Components
+	DataBindings
+----------------
+What is an Angular?
+	It is a Client-side framework used to create web applications. 
+	It is a meant  for to create SPA(Single Page Appliaction) based web application.
+	Angular works baed on TypeScript
+	It is a Cross-Browser/Platform compitable fw. 
+	It separates Script Logic  and UI Logic by using DOM Manipulations.
+
+How to Install Angular:- 
+----------------------
+1.  Install Node JS
+2.  Install TypeScript
+3.  Install Angular CLI as follows from the command prompt.
+		npm install @angular/cli -g
+			the above command installs latest version of Angular.
+		npm install @angular/cli@10.2.0 -g
+			this command installs specific version of Angular. 
+
+4.  Install any one editor to work with angular application(VS Code).
+--------------------------------------------------
+How to create an angular application.
+
+1.  Open Command Prompt then use following command
+	ng new <application_name>
+2.  Open application by using VSCode
+3.  To run the application, command prompt
+	ng serve
+
+Angular application comes with a web server, it has default port no : 4200
+	once app executed, open browser then use following url
+		http://localhost:4200/
+---------------------------------------------------
+What is a Component?
+	It is a building block of the Angular App where it is meant for creating and desing web pages.
+	Every Component will have following four items
+
+		html page for designing
+		css file for to write css
+		ts(typescript) for script functionality
+		spec.ts Page for testing purpose.
+
+	Every Angular App having a default component called as "App" component. 
+	Which is also called as "Root" Component. 
+
+whenever we run the application, first Index.html page will be loaded, within that page "App" component will be rendered. 
+
+to create a component :-     
+			ng  generate  component  <componentname>/ ng  g  component  <componentname>
+-----------------------------------------
+Data Bindings :- 
+
+It is a  relation b/w script and html page(template). 
+
+these are implemented in 4 ways
+
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two - Way Binding
+
+Interpolation :-  it is the process of showing typescript variable value into html page. 
+			{{variable name}}
+
+Property Binding :- it is also used to bind variable value to any tool like textbox, radiobutton, ...
+		<tag  [attribute_name]="variablename" ... />
+
+Event Binding :- it is used to to call a typescript method for an event like click, doubleclick, ....
+
+	<input type="button"  (event_name)="methodname()" />
+
+	<input type="button"  onclick="demo()" />  == html format
+	
+	<input type="button"   (click)="demo()" />  == angular format
+---------------------------
+Two - Way Binding :- It is the process of change the value of variable at run-time and vice-versa.
+			i.e. if we change value in script it has to change in template and vice versa.
+		<tag  [(ngModel)]="variablename" />
+
+	"ngModel" is one of the pre-defined directive which is used to create two way binding.
+
+Note :-  import "FormsModule"  in app.modules.ts file
+	import { FormsModule } from '@angular/forms';
+then add "FormsModule" in Imports section as follows
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+---------------------------------------
