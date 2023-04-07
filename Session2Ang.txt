@@ -1,0 +1,92 @@
+Today's Agenda:-
+----------------
+1.  Routing
+2.  Directives
+3.  Pipes
+---------------------------------
+What is a Routing? 
+It is the concept of page navigations b/w componenet in angular application.
+
+While using Routing, there are twi types of Navigations
+		Hash(#) Based Navigations
+		Hashless(text) Based Navigations.
+				Ex:-  HomeComponent, LoginComponent
+http://localhost:4200/home	==>HashLess
+http://localhost:4200/#home	==>Hash Based
+
+
+Steps :- 
+
+1.  Check the routing package in package.json
+2.  Import following two classes in "App" Componet in file called "app-routing.module.ts"
+	Import {Routes, RouterModule } from '@angular/router';
+3.  Now create routes for every component as follows in a file "app-routing.module.ts"
+	var <variable/object> : Routes=[
+		{path:"link text"  component:componentname},
+		{path:"link text"  component:componentname},
+		{path:"link text"  component:componentname},
+		...................
+	]
+
+4. Goto App Component, then create links for the every component as follows
+			<a routerLink="link text">Any Text</a>
+5. Now create a container to view a component in "App" Componenet.
+		<router-outlet></router-outlet>
+-----------------------------
+Diretives :- 
+
+These are some collection of template based keywords of an angular, which meant for performing different action while presenting data in template. 
+
+"ngModel" is one of the directive which meant for two - way binding
+--------------------
+"ngClass" :- it is used to set cssclass dynamically in script.
+
+<tag  [ngClass]="component Property"> </tag>
+-------------------
+ngIf :- it is used check condition
+
+<tag  *ngIf="condition">
+	content
+</tag>
+-------------------
+ngIf else
+
+	<tag  *ngIf="condition; then templatename1;else templatename2>
+
+	</tag>
+
+	TEMPATE1 AND TEMPLATE2 ARE THE CONTAINERS, WE HAVE TO DEFINE THOSE CONTAINERS AS FOLLOWS
+
+	<ng-template   #tempname>
+		action
+	</ng-template>
+-------------------------
+ngSwitch :- 
+		<tag  [ngSwitch]="variable/propety">
+
+			<tag  *ngSwitchCase=" 'value' ">
+				content
+			</tag>
+
+			<tag  *ngSwitchDefault>
+				default content
+			</tag>
+		</tag>
+----------------------
+ngFor :- 
+		
+	<tag *ngFor="let variable of arrayname">
+		content
+	</tag>
+----------------------
+How to create a typescript class?
+			ng g class <classname>
+----------------------------
+As per the typescript array, to add any value/objects to the existing array following method used.
+		arrayname.push(value/object);
+
+As per the typescript array, to delete any value/object from existing array use following method
+		arrayname.splice(index, no of values);
+
+
+
