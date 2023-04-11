@@ -1,0 +1,65 @@
+Today's Agenda:- 
+---------------
+1. Forms and Validations
+2. Services
+----------------
+Forms & Validations:- 
+As per angular, there are two types of forms 
+
+1. Template Driven Forms
+2. Reactive Driven Forms
+
+Template Driven Forms :- 
+these  forms normal forms regularly creating using html, for that form by using anuglar we can apply validations. 
+
+this type of forms are useful whenever creating simple forms like Login, Feedback, Contact .....
+
+to create any type of forms first we have import "FormsModule". 
+
+------------------------
+Reactive Driven Forms :- 
+
+These forms are newly added forms into angular. here form creation will be done in typescript file later html control created. 
+
+1.  Import a Module called as "ReactiveFormsModule"
+2.  To represent each field  user has to use following classes 
+		FormControl, FormGroup is used to hold group of controls. 
+3.  To specify validations, use "Validators" class
+
+----------------------------
+For Validation purpose for Both Template & Reactive Driven Forms:-
+
+touched 
+	true  :  field focused
+	false :  field not focused
+
+untouched 
+	true  :  field not focused
+	false :  field  focused
+
+pristine 
+	true  :  field not modified by the user
+	false :  field modified  by the user
+
+valid 
+	true :  field value is valid
+	false:  field value not valid
+
+invalid 
+	true :  field value not valid
+	false:  field value  valid
+
+^[0-9]*$ = Only Numbers
+^[a-zA-Z]*$ = only alphabets
+------------------
+ng add  @ng-bootstrap/ng-bootstrap  :-  it will install bootstrap to the working application.
+--------------------------------------------------
+Services :- 
+The service is a class which contains reusable code(business logic, validations, calculations) etc.
+which can be called in one or more components. so that basically service exist of reusable properties and methods. 
+
+ng g service <service name>
+
+To create any indiviusal typescript class in angular application
+
+ng g class <classname>
