@@ -1,0 +1,100 @@
+Today's Agenda
+---------------
+1. JSON REST API SERVER
+2. RxJS Module
+---------------
+JSON Server:- 
+
+By Using This Server we can create REST API's in JSON Format. 
+
+Steps :- 
+
+1. Install JSON Server by using command prompt
+	npm install -g json-server
+2. Now Create a file with the name of "db.json", then add table structure in the form of json as follows
+
+{
+"tablename" :[
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+.......
+],
+
+"tablename" :[
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+.......
+],
+
+"tablename" :[
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+	{
+		"fieldname":value,
+		"fieldname":value,
+		......
+	}, 
+.......
+], 
+
+.......
+}
+
+3. to work with JSON Server, we have to start that server with following command
+	json-server db.json
+
+here  JSON Server runs on following url: http://localhost:3000/
+4. Now Open Browser then use following URL to check server. 
+
+Note:-  Ctrl + C to stop server
+
+---------------------
+RxJS Module
+---------------------
+RxJS stands for *R*eactive E*x*tensions for *J*ava*S*cript, 
+
+and it’s a library that gives us an implementation of Observables for JavaScript.
+RxJS, is a reactive library used to implement reactive programming to deal with async implementation, callbacks, and event-based programs.
+
+Observable :- It is a data source(events, http request, custom data source..) which sends in then form of data packets to the observer.
+
+Observer :-  It is an object that subscribes to the observable and listens to the data packets that sends by observable.
+
+these two classes comes under RxJS Module.  
+--------------------
+What is a Subscription?  
+Normally Subscription means an arrangement to receive something.   
+
+Similarly, in Angular applications Observables will be connected to observers and whenever they observe a new value or change in data, they will execute code with the help of Subscription and all the subscribed components will receive the updated outcome. 
+
+There is a method to this action subscribe(). 
+
+--------------------------------------------------
+HttpClient :-  This class is used to send request and get responses with the help of any API's.
+
+getmapping  = get()
+postmapping = post()
+putmapping = put()
+deletemapping = delete()
+----------------------------------------------
+ng add  @ng-bootstrap/ng-bootstrap
+https://medium.com/@devmrin/create-a-rest-api-json-server-in-less-than-1-minute-acf286600f03
