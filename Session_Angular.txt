@@ -1,0 +1,32 @@
+Today's Agenda:- 
+----------------
+1. Searching, Sorting and Pagination
+---------------------------------
+Searching, Sorting and Pagination
+
+1.  Create an application where it show all the employee information using json-server.
+2.  install following modules
+		npm install ng2-search-filter  = searching 
+		npm install ng2-order-pipe     = sorting
+		npm install ngx-pagination@5.0 = pagination
+
+3.  Add following modules in app.module.ts file. 
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
+4.  Now implement searching process
+	a. add a textbox in html page.
+	b. create a method where filter functionality then add that function to the textbox 
+			(ngModelChange)="funname()"
+5. Sorting purpose :-
+	a. create a function  by name "Sort(colname)"  then add the functionality
+	b. Implement that function in colmn headings of the table 
+		<th  (click)="sort('colname')">Heading</th>
+	c. While presenting data, use "orderBy" as follows
+			<tr  *ngFor="let e of empinfo | orderBy:key:reverse>
+6. Pagination Purpose :
+	a. Add the following tag in table tag
+		<pagination-controls (pageChange)="p = $event"></pagination-controls>
+			here p is a numeric variable
+	b. Now add following pipe in data presentation
+	<tr *ngFor="let e of empinfo |  paginate:{itemsPerPage:3,currentPage:p}">
