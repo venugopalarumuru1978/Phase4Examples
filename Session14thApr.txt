@@ -1,0 +1,25 @@
+Today's Agenda:-
+--------------
+Creating Login Skeleton
+------------------
+1.  Login Component
+		Two Types of Users  (Admin, Employee)
+		Once Admin Logins :-  A Different Navbar has to come(Admin related links)
+		Once Employee Logins :-  Another Diffrent Navbar has to come(Emp related links)
+2.  Register Component
+---------------------------------
+DoCheck :-  It is an interface which check every time which component is navigating on url.
+ngDoCheck() :-  by using this method we have write logic to handle URL mappings. 
+-------------
+Guards :- 
+ 
+It is a service that executes at the specified situtation while angualr application is navigating from one route to another route. 
+
+Angular provides two types of guards:- 
+
+	CanActivate	:-  It executes before entering into a route.
+				to work with guards, first we have create a guard.
+
+				ng g guard  <guardname>;
+
+	CanDeActivate	:-
