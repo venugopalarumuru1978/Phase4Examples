@@ -1,0 +1,150 @@
+DESCRIPTION
+
+The Online Test Application system creates an application that enables users to provide online tests, review them, and display the results.
+
+System Details
+This system contains three main modules: Quiz, Review, and Result. The quiz section of the online test application accepts the questions in JSON format. The JSON file can be easily shared from the server in the pre-defined format. The application renders the test at the client-side.
+The “Review and display result” section allows users to declare the results immediately. You can simply call another JSON with the answers in it and evaluate and display the results immediately.
+---------------------------------
+Entities :- 
+-----------
+User
+Questions
+Results
+
+There two users :- 
+
+One User : Admin  (Username : Admin  Password : "admin@123")
+1.  Adding Questions and it's answers. 
+2.  Viewing Registered Users.
+3.  Viewing Results of the all the users
+
+Another User :- User(registered person) :- user has to login with mailid and password.
+1.  Quiz(Writing Online Test)
+2.  Viewing Result
+
+
+db.json
+{
+	"HTMLQ": [
+		{
+		  "ID":1,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        },
+
+		{
+		  "ID":2,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        }
+	.......
+	],
+
+	"JAVAQ": [
+		{
+		  "ID":1,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        },
+
+		{
+		  "ID":2,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        }
+	.......
+	],
+
+	"ANGULARQ":[
+		{
+		  "ID":1,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        },
+
+		{
+		  "ID":2,
+		  "Question":"............",
+		  "Opt1":"....",
+		  "Opt2":"....",
+		  "Opt3":".....",
+		  "Ans":"......"
+	        }
+	.......
+	],
+
+	"USers":[
+		{
+			"id":1,
+			 "personname":"......",
+		         "email":".......",
+	                 "password":"........"
+		},
+		{
+			"d":2,
+			 "personname":"......",
+		         "email":".......",
+	                 "password":"........"
+		}
+	
+	],
+	
+	"Results":[
+		{
+			"id":1, 
+			"userid":1, 
+			"Score":value,	(Total No of Question, Score is correctly answered Questions)
+			"Results":"Pass/Fail"   (70% Answers should correct)
+		},
+
+	]
+}
+-------------------------------------------------
+DESCRIPTION
+
+Project objective:
+
+Kitchen Story is an e-commerce portal that lets people shop  basic food items on their website. The website needs to have the following features:
+
+
+A search form in the home page to allow entry of the food items to be purchased by the customer.
+
+Based on item details entered, it will show available food items with  price.
+
+Once a person selects an item to purchase, they will be redirected to the list of available items. In the next page, they are shown the complete breakout of the order and details of the payment to be made in the payment gateway. When payment is done, they are shown a confirmation page with details of the order.
+
+For the above features to work, there will be an admin backend with the following features:
+
+Admin login page where admin can change password after login if he wants to
+
+A master list of food items available for purchase
+
+A functionality to add or remove food items
+----------------------
+Entities :- 
+----------------------
+1. Food Items
+	Food Id, Food Name,  Price
+2. Order Items 
+	OrderID	  Food Name  No of Items   Price  Total Amount 
+3.  Customer :-
+	Customer ID,  Customer Name   Email   Phone Number
+4.  Payments
+	PaymentID	PaymentAmount     CustomerID    PayDate  Paytime  PaymentMode
+--------------------
